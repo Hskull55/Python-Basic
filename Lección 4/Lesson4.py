@@ -32,21 +32,24 @@
 
 # Task 4 - Identity operator
 # Working but the IDE gives us an error
-# print(5 is 5)
+# print(9999999999999 is 9999999999999)
 # print(8 is 9)
 # print(6 is "peach")
 
-# Proper use case of this operator
-# x1 = 5
-# x2 = 5
-# x3 = 8
-# y1 = "random name"
-# y2 = "random animal"
-# print(x1 is x2)
-# print(x1 is x3)
-# print(x1 is y1)
-# print(y1 is y1)
-# print(y1 is y2)
+# a = int("999999999")
+# b = int("999999999")
+# print(a == b)  # True (porque sus valores son iguales)
+# print(a is b)  # False (porque están en sitios distintos de la memoria)
+
+# lista_a = [1, 2, 3]
+# lista_b = [1, 2, 3]
+# lista_c = lista_a  # lista_c "copia" la referencia al mismo objeto
+# # 1. Comparar contenido (==)
+# print(lista_a == lista_b)  # True -> Tienen los mismos elementos adentro.
+# # 2. Comparar identidad física en memoria (is)
+# print(lista_a is lista_b)  # False -> Aunque tienen lo mismo, son DOS listas distintas creadas en sitios diferentes de la memoria RAM.
+# # 3. ¿Cuándo da True con 'is'?
+# print(lista_a is lista_c)  # True -> 'lista_c' apunta exactamente al mismo objeto en la memoria que 'lista_a'.
 
 # Task 5 - membership operator
 
@@ -69,8 +72,8 @@
 #      print(str(a1) + "^" + str(a2) + " not equals to " + str(a2) + "^" + str(a1))
 
 # Task 7 - email address validity
-# address = "manyme@logiscool.com"
-# if "@" in address and ( address.endswith(".com") or address.endswith(".hu")):
+# address = "hskull55@logiscool.com"
+# if "@" in address and ( address.endswith(".com") or address.endswith(".es")):
 #     print("Valid address")
 # else:
 #     print("Invalid address")
@@ -109,10 +112,26 @@
 #     else:
 #         print("There are multiple greatest numbers here.")
 
+
+# numeros = [
+#     float(input("Enter the first number!\n")),
+#     float(input("Enter the second number!\n")),
+#     float(input("Enter the third number!\n")),
+# ]
+#
+# mayor = max(numeros)
+#
+# if numeros.count(mayor) > 1:
+#   print("There are multiple greatest numbers here.")
+# else:
+#   print(f"{mayor} is the greatest number.")
+#   print("%s is the greatest number." % mayor)
+#   print("%f is the greatest number." % mayor)
+
 # Task 10 - I thought of an animal
 # animal_leg = int(input("Has 2 or 4 legs?"))
-# animal_fly = input("Can fly?")
-# animal_swim = input("Can swim?")
+# animal_fly = input("Can fly? (yes/no)")
+# animal_swim = input("Can swim? (yes/no)")
 # if animal_leg == 2:
 #     if animal_fly.lower == "yes":
 #         if animal_swim.lower == "yes":
